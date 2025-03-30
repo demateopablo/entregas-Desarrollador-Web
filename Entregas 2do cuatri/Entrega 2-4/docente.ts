@@ -21,12 +21,19 @@ export class Docente {
         return this.alumnos[posicion];
     }
 
-    public getAlumnos():string {
-        let infoAlumnos:string=``;
+    public getAlumnos(): string {
+        let infoAlumnos: string = ``;
         this.alumnos.forEach(alumno => {
-            infoAlumnos+=`${alumno.getNombreCompleto()}\n`;
+            infoAlumnos += `${alumno.getNombreCompleto()}\n`;
         })
         return infoAlumnos;
     }
 
+    public matricularAlumno(alumno: Alumno): void {
+        this.alumnos.push(alumno);
+    }
+
+    public expulsarAlumno(posicion: number): void {
+        this.alumnos.splice(posicion, 1);
+    }
 }   
