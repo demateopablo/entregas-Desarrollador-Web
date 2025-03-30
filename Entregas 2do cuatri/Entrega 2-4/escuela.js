@@ -24,6 +24,18 @@ var Escuela = /** @class */ (function () {
         });
         return infoDocentesYAlumnos;
     };
+    Escuela.prototype.despedirDocente = function (posicion) {
+        this.docentes.splice(posicion, 1);
+    };
+    Escuela.prototype.expulsarAlumno = function (posicionDocente, posicionAlumno) {
+        this.docentes[posicionDocente].expulsarAlumno(posicionAlumno);
+    };
+    Escuela.prototype.contratarDocente = function (docente) {
+        this.docentes.push(docente);
+    };
+    Escuela.prototype.matricularAlumno = function (alumno, posicionDocente) {
+        this.docentes[posicionDocente].matricularAlumno(alumno);
+    };
     return Escuela;
 }());
 exports.Escuela = Escuela;

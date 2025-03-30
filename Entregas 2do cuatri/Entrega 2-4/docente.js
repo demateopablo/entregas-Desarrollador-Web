@@ -22,6 +22,12 @@ var Docente = /** @class */ (function () {
         });
         return infoAlumnos;
     };
+    Docente.prototype.matricularAlumno = function (alumno) {
+        this.alumnos.push(alumno);
+    };
+    Docente.prototype.expulsarAlumno = function (posicion) {
+        this.alumnos.splice(posicion, 1);
+    };
     return Docente;
 }());
 exports.Docente = Docente;

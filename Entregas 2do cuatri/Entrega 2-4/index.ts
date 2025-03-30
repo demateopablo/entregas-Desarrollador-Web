@@ -32,3 +32,11 @@ console.log(escuela1.getDocente(1).getAlumno(3).getNombreYAprobacion()); */
 /* console.log(escuela1.getDocente(0).getAlumnos()); */
 
 console.log(escuela1.getDocentesYAlumnos());
+
+escuela1.contratarDocente(new Docente("Marcelo Gallardo",[new Alumno("Diego Parra",3),new Alumno("Lucas Ferro",8)]))
+
+console.log(escuela1.getDocentesYAlumnos());
+
+escuela1.expulsarAlumno(2,1);
+
+console.log(escuela1.getDocentesYAlumnos());
