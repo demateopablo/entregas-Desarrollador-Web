@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var auto_1 = require("./auto");
+var marca = "Ford";
+var modelo = "Mondeo";
+var anio = 2025;
+var velocidad_maxima = 250;
+var auto1 = new auto_1.Auto(marca, modelo, anio, velocidad_maxima);
+marca = "VolksWagen";
+modelo = "Up";
+anio = 2020;
+velocidad_maxima = 180;
+var auto2 = new auto_1.Auto(marca, modelo, anio, velocidad_maxima);
+console.log("Auto 1:\n   Marca: ".concat(auto1.marca, ", modelo: ").concat(auto1.modelo, ", a\u00F1o: ").concat(auto1.anio, ", velocidad m\u00E1xima: ").concat(auto1.velocidad_maxima));
+console.log("Auto 2:\n   Marca: ".concat(auto2.marca, ", modelo: ").concat(auto2.modelo, ", a\u00F1o: ").concat(auto2.anio, ", velocidad m\u00E1xima: ").concat(auto2.velocidad_maxima));
+auto2.encender(); //Para acelerar hay que tener el auto encendido
+console.log("Velocidad actual del auto 2: ".concat(auto2.getVelocidad()));
+auto2.acelerar(40);
+console.log("Velocidad actual del auto 2: ".concat(auto2.getVelocidad()));
+auto2.frenar(10);
+console.log("Velocidad actual del auto 2: ".concat(auto2.getVelocidad()));
