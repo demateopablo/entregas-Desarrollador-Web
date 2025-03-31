@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbb;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    gap: 15px;
+    padding: 25px;
+}
+
+.div1 {
+    background-color: burlywood;
+    border-color: coral;
+    scrollbar-color: burlywood darkcyan;
+}
+
+.div2 {
+    background-color: cadetblue;
+    border-color: darkcyan;
+    scrollbar-color: darkcyan burlywood;
+}
+
+.div3 {
+    background-color: lightgreen;
+    border-color: darkcyan;
+    scrollbar-color: lightgreen mediumseagreen;
+}
+
+main:hover> :not(:hover) {
+    filter: blur(5px);
+    opacity: 0.3;
+}
+
+main>div {
+    overflow: hidden scroll;
+    transition: scale 0.3s ease-in-out;
+    scrollbar-gutter: stable;
+    border: 2px solid;
+    width: 350px;
+    height: 500px;
+    border-radius: 7px;
+    scrollbar-width: thin;
+    resize: both;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div:hover {
+    scale: 1.3;
+    opacity: 1;
+}
+
+main div h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans', sans-serif;
+    font-style: oblique;
+    text-align: center;
+    margin: 10px;
+}
+
+main div img {
+    height: auto;
+    width: 150px;
+    display: flex;
+    margin: auto;
+    transition: transform 0.5s ease-in;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px #000;
+    opacity: 0.8;
+}
+
+main div img:hover {
+    opacity: 1;
+    transform: rotate(4deg);
+}
+
+main div p {
+    text-align: left;
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.capital {
+    font-size: 2.5em;
+    margin-left: 15px;
+}
