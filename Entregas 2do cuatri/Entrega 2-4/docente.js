@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Docente = void 0;
 var Docente = /** @class */ (function () {
-    function Docente(nombreCompleto, alumnos) {
+    function Docente(nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
-        this.alumnos = alumnos;
+        this.alumnos = new Array();
     }
     Docente.prototype.getNombreCompleto = function () {
         return this.nombreCompleto;
@@ -12,8 +12,13 @@ var Docente = /** @class */ (function () {
     Docente.prototype.setNombreCompleto = function (nombreCompleto) {
         this.nombreCompleto = nombreCompleto;
     };
-    Docente.prototype.getAlumno = function (posicion) {
-        return this.alumnos[posicion];
+    Docente.prototype.getAlumno = function (alumno) {
+        var posicion = this.alumnos.indexOf(alumno);
+        if (posicion !== -1) {
+            return this.alumnos[posicion];
+        }
+        else
+            throw new Error("Alumno no encontrado");
     };
     Docente.prototype.getAlumnos = function () {
         var infoAlumnos = "";
@@ -22,11 +27,16 @@ var Docente = /** @class */ (function () {
         });
         return infoAlumnos;
     };
-    Docente.prototype.matricularAlumno = function (alumno) {
+    Docente.prototype.vincularAlumno = function (alumno) {
         this.alumnos.push(alumno);
     };
-    Docente.prototype.expulsarAlumno = function (posicion) {
-        this.alumnos.splice(posicion, 1);
+    Docente.prototype.desvincularAlumno = function (alumno) {
+        var posicion = this.alumnos.indexOf(alumno);
+        if (posicion !== -1) {
+            this.alumnos.splice(posicion, 1);
+        }
+        else
+            throw new Error("Alumno no encontrado");
     };
     return Docente;
 }());

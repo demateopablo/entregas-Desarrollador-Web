@@ -15,11 +15,11 @@ export class Alumno {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public estaAprobado(): string {
-        return (this.nota > 7 ? "Aprobado" : "Desaprobado")
+    public estaAprobado(): boolean {
+        return (this.nota > 7)
     }
 
     public getNombreYAprobacion(): string {
-        return `${this.getNombreCompleto()}\t${this.estaAprobado()}`;
+        return `${this.getNombreCompleto()}\t${this.estaAprobado() ? "Aprobado" : "Desaprobado"}\n`;
     }
 }
