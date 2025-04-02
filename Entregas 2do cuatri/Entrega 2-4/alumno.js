@@ -13,10 +13,10 @@ var Alumno = /** @class */ (function () {
         this.nombreCompleto = nombreCompleto;
     };
     Alumno.prototype.estaAprobado = function () {
-        return (this.nota > 7 ? "Aprobado" : "Desaprobado");
+        return (this.nota > 7);
     };
     Alumno.prototype.getNombreYAprobacion = function () {
-        return "".concat(this.getNombreCompleto(), "\t").concat(this.estaAprobado());
+        return "".concat(this.getNombreCompleto(), "\t").concat(this.estaAprobado() ? "Aprobado" : "Desaprobado");
     };
     return Alumno;
 }());

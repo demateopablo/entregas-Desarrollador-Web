@@ -11,7 +11,7 @@ export class Alumno {
         return this.nombreCompleto;
     }
 
-    public setNombreCompleto(nombreCompleto: string) {
+    public setNombreCompleto(nombreCompleto: string):void {
         this.nombreCompleto = nombreCompleto;
     }
 
@@ -20,6 +20,6 @@ export class Alumno {
     }
 
     public getNombreYAprobacion(): string {
-        return `${this.getNombreCompleto()}\t${this.estaAprobado() ? "Aprobado" : "Desaprobado"}\n`;
+        return `${this.getNombreCompleto()}\t${this.estaAprobado() ? "Aprobado" : "Desaprobado"}`;
     }
 }
