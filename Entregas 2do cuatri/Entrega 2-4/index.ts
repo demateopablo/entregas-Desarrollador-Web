@@ -3,25 +3,25 @@ import { Docente } from "./docente";
 import { Alumno } from "./alumno";
 
 //Inicializamos 4 alumnos
-let alumno1 = new Alumno('Juan Perez', 8);
-let alumno2 = new Alumno('Lucio Gomez', 4);
-let alumno3 = new Alumno('Julian Alvarez', 9);
-let alumno4 = new Alumno('Pedro Arias', 1);
+let alumno1:Alumno = new Alumno('Juan Perez', 8);
+let alumno2:Alumno = new Alumno('Lucio Gomez', 4);
+let alumno3:Alumno = new Alumno('Julian Alvarez', 9);
+let alumno4:Alumno = new Alumno('Pedro Arias', 1);
 
 //Inicializamos un docente
-let docente_lalo = new Docente('Lalo Landa');
+let docente_lalo:Docente = new Docente('Lalo Landa');
 
 //Inicializamos 4 alumnos
-let alumno5 = new Alumno('Maria Hernandez', 3);
-let alumno6 = new Alumno('Arya Stark', 7);
-let alumno7 = new Alumno('Marcos Estevez', 8);
-let alumno8 = new Alumno('Pablo Demateo', 10);
+let alumno5:Alumno = new Alumno('Maria Hernandez', 3);
+let alumno6:Alumno = new Alumno('Arya Stark', 7);
+let alumno7:Alumno = new Alumno('Marcos Estevez', 8);
+let alumno8:Alumno = new Alumno('Pablo Demateo', 10);
 
 //Inicializamos un docente
-let docente_julia = new Docente('Julia Fernandez');
+let docente_julia:Docente = new Docente('Julia Fernandez');
 
 //Inicializamos la escuela
-let escuela = new Escuela('CEPIT');
+let escuela:Escuela = new Escuela('CEPIT');
 
 //Contratamos al primer docente
 escuela.contratarDocente(docente_lalo);
