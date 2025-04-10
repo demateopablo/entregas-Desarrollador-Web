@@ -16,4 +16,8 @@ export class Heladera extends Electrodomestico {
         }
         this.temperatura = nuevaTemp;
     }
+
+    public mostrarInfo(): string {
+        return `${super.mostrarInfo()}\nTemperatura:\t${this.temperatura}`;
+    }
 }

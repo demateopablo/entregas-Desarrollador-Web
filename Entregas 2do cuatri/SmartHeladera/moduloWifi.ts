@@ -21,4 +21,8 @@ export class ModuloWifi {
         this.frecuenciaGhz = frecuencia;
     }
 
+    public conectarAInternet(): void {
+        console.log(`Conectando a internet...`)
+        console.log(`Conexion establecida correctamente.`)
+    }
 }

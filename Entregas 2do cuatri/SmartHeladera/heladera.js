@@ -32,6 +32,9 @@ var Heladera = /** @class */ (function (_super) {
         }
         this.temperatura = nuevaTemp;
     };
+    Heladera.prototype.mostrarInfo = function () {
+        return "".concat(_super.prototype.mostrarInfo.call(this), "\nTemperatura:\t").concat(this.temperatura);
+    };
     return Heladera;
 }(electrodomestico_1.Electrodomestico));
 exports.Heladera = Heladera;

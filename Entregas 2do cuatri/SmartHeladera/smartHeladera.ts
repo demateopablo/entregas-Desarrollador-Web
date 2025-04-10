@@ -8,12 +8,15 @@ export class SmartHeladera extends Heladera {
         super(marca, modelo);
         this.moduloWifi = moduloWifi;
     }
-    public conectarInternet(): void {
-        console.log(`Conectando...`)
-        console.log(`Conexion establecida correctamente.`)
+    public conectarAInternet(): void {
+        this.moduloWifi.conectarAInternet();
     }
 
     public mostrarVelocidadDeConexion(): number {
         return this.moduloWifi.getVelocidad();
+    }
+
+    public mostrarInfo(): string {
+        return `${super.mostrarInfo()}\nWiFi:\t${this.moduloWifi.getVelocidad()} Mbps - ${this.moduloWifi.getFrecuencia()} GHz`;
     }
 }

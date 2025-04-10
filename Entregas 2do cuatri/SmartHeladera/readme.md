@@ -26,7 +26,7 @@
 
 ## 🧱 Parte 2 - Composición
 
-### Clase ModuloWifi
+### Crear clase ModuloWifi con atributos:
 - **Atributos:**
   - `velocidadMbps` (number)
   - `frecuenciaGHz` (number)
@@ -34,13 +34,9 @@
 - **Métodos:**
   - Getters y setters para los atributos
 
-### En SmartHeladera
-- **Atributos adicionales:**
-  - `moduloWifi`: `ModuloWifi`
-
-- **Funcionalidades adicionales:**
-  - Simular una conexión online (`conectarInternet()`)
-  - Mostrar la velocidad de conexión
+### En SmartHeladera agregar un atributo moduloWifi: ModuloWifi y usarlo para:
+  - simular una conexión online (`conectarInternet()`)
+  - mostrar la velocidad de conexión
 
 ## 🧪 Parte 3 - Prueba
 

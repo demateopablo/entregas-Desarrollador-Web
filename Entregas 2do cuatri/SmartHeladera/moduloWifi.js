@@ -18,6 +18,10 @@ var ModuloWifi = /** @class */ (function () {
     ModuloWifi.prototype.setFrecuencia = function (frecuencia) {
         this.frecuenciaGhz = frecuencia;
     };
+    ModuloWifi.prototype.conectarAInternet = function () {
+        console.log("Conectando a internet...");
+        console.log("Conexion establecida correctamente.");
+    };
     return ModuloWifi;
 }());
 exports.ModuloWifi = ModuloWifi;

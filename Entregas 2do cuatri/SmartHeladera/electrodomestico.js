@@ -7,7 +7,7 @@ var Electrodomestico = /** @class */ (function () {
         this.modelo = modelo;
         this.estaEncendido = false;
     }
-    Electrodomestico.prototype.endender = function () {
+    Electrodomestico.prototype.encender = function () {
         if (this.estaEncendido) {
             return;
         }
@@ -20,7 +20,7 @@ var Electrodomestico = /** @class */ (function () {
         this.estaEncendido = false;
     };
     Electrodomestico.prototype.mostrarInfo = function () {
-        return "Marca:\t".concat(this.marca, "\nModelo:\t").concat(this.modelo, "\nActualmente ").concat(this.estaEncendido ? 'encendido' : 'apagado');
+        return "Marca:\t".concat(this.marca, "\nModelo:\t").concat(this.modelo, "\nEncendido:\t").concat(this.estaEncendido ? 'Si' : 'No');
     };
     return Electrodomestico;
 }());

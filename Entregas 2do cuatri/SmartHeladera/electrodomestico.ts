@@ -9,7 +9,7 @@ export class Electrodomestico {
         this.estaEncendido = false;
     }
 
-    public endender(): void {
+    public encender(): void {
         if (this.estaEncendido) {
             return;
         }
@@ -22,6 +22,6 @@ export class Electrodomestico {
         this.estaEncendido = false;
     }
     public mostrarInfo(): string {
-        return `Marca:\t${this.marca}\nModelo:\t${this.modelo}\nActualmente ${this.estaEncendido?'encendido':'apagado'}`;
+        return `Marca:\t${this.marca}\nModelo:\t${this.modelo}\nEncendido:\t${this.estaEncendido?'Si':'No'}`;
     }
 }

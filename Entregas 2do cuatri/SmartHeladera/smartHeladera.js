@@ -24,12 +24,14 @@ var SmartHeladera = /** @class */ (function (_super) {
         _this.moduloWifi = moduloWifi;
         return _this;
     }
-    SmartHeladera.prototype.conectarInternet = function () {
-        console.log("Conectando...");
-        console.log("Conexion establecida correctamente.");
+    SmartHeladera.prototype.conectarAInternet = function () {
+        this.moduloWifi.conectarAInternet();
     };
     SmartHeladera.prototype.mostrarVelocidadDeConexion = function () {
         return this.moduloWifi.getVelocidad();
+    };
+    SmartHeladera.prototype.mostrarInfo = function () {
+        return "".concat(_super.prototype.mostrarInfo.call(this), "\nWiFi:\t").concat(this.moduloWifi.getVelocidad(), " Mbps - ").concat(this.moduloWifi.getFrecuencia(), " GHz");
     };
     return SmartHeladera;
 }(heladera_1.Heladera));
