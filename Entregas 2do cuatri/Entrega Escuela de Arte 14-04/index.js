@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var escuela_1 = require("./escuela");
+var curso_1 = require("./curso");
+var alumno_1 = require("./alumno");
+var docente_1 = require("./docente");
+var juan = new alumno_1.Alumno("Juan", "Perez", new Date("1995-05-27"), 39725123);
+var maria = new alumno_1.Alumno("Maria", "Suarez", new Date("1997-04-17"), 40373333);
+var lucas = new alumno_1.Alumno("Lucas", "Gonzalez", new Date("1996-11-01"), 40002234);
+var doc_Pablo = new docente_1.Docente("Pablo", "Demateo", new Date("1991-07-26"), 36364622, 1200);
+var doc_Gimena = new docente_1.Docente("Gimena", "Corrales", new Date("1993-01-30"), 37855697, 1100);
+var cursoAlgebra = new curso_1.Curso("Algebra 1", 12, new Date("2025-08-5"), doc_Pablo);
+cursoAlgebra.agregarAlumnos([juan, maria]);
+var cursoIngles = new curso_1.Curso("Ingles 2", 8, new Date("2025-03-6"), doc_Gimena);
+cursoIngles.agregarAlumnos([lucas]);
+var CRESTA = new escuela_1.Escuela("CRESTA", [cursoAlgebra, cursoIngles]);
+CRESTA.listarInfo();
