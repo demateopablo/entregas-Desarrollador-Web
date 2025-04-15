@@ -1,5 +1,6 @@
 import { Docente } from './docente';
 import { Alumno } from './alumno';
+
 export class Curso {
     private nombre: string;
     private duracion_semanas: number;
@@ -24,11 +25,14 @@ export class Curso {
         console.log(`--------------------------------------------`)
     }
 
-    agregarAlumnos(alumnos: Alumno[]):void {
-        alumnos.forEach(al => this.alumnos.push(al));
+    agregarAlumnos(alumnos: Alumno[]): void {
+        alumnos.forEach(al => {
+            this.alumnos.push(al);
+        }
+        );
     }
 
-    getNombre():string{
+    getNombre(): string {
         return this.nombre;
     }
 }

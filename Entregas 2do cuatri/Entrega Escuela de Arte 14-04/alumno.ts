@@ -2,7 +2,6 @@ import { Persona } from './persona';
 import { Escuela } from './escuela';
 
 export class Alumno extends Persona {
-    private persona: Persona;
     private nro_legajo: number;
 
     constructor(nombre: string, apellido: string, fecha_nacimiento: Date, dni: number) {

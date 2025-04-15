@@ -1,7 +1,6 @@
 import { Persona } from './persona';
 
 export class Docente extends Persona {
-    private persona: Persona;
     private salario: number;
 
     constructor(nombre: string, apellido: string, fecha_nacimiento: Date, dni: number, salario: number) {

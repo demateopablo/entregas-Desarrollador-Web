@@ -20,7 +20,9 @@ var Curso = /** @class */ (function () {
     };
     Curso.prototype.agregarAlumnos = function (alumnos) {
         var _this = this;
-        alumnos.forEach(function (al) { return _this.alumnos.push(al); });
+        alumnos.forEach(function (al) {
+            _this.alumnos.push(al);
+        });
     };
     Curso.prototype.getNombre = function () {
         return this.nombre;
