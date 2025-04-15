@@ -5,11 +5,11 @@ import { Docente } from "./docente";
 export class Escuela {
     private nombre: string;
     private cursos: Curso[];
+    private alumnos: Alumno[]
+    private docentes: Docente[]
     static contadorLegajoAlumnos: number = 1;
-    alumnos: Alumno[]
-    docentes: Docente[]
 
-    constructor(nombre: string, cursos: Curso[] = []) {
+    constructor(nombre: string, cursos: Curso[] = new Array) {
         this.nombre = nombre;
         this.cursos = cursos;
         this.alumnos = new Array;
@@ -46,7 +46,7 @@ export class Escuela {
         if (indexAlumno !== -1) return;
         this.alumnos.push(alumno);
     }
-    
+
     agregarDocente(docente: Docente): void {
         let indexDocente: number = this.docentes.findIndex(doc => doc.getDni() == docente.getDni());
         if (indexDocente !== -1) return;

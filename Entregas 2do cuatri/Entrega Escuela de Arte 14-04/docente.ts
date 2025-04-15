@@ -14,12 +14,12 @@ export class Docente extends Persona {
         console.log(`Salario:\t\t${this.salario}`);
     }
 
-    getSalario():number{
+    getSalario(): number {
         return this.salario;
     }
 
-    setSalario(nuevoSalario:number){
-        if(nuevoSalario<0) return;
-        this.salario=nuevoSalario;
+    setSalario(nuevoSalario: number): void {
+        if (nuevoSalario < 0) return;
+        this.salario = nuevoSalario;
     }
 }

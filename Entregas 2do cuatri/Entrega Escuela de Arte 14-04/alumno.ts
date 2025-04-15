@@ -12,7 +12,7 @@ export class Alumno extends Persona {
     listarInfo(): void {
         console.log(`--- Alumno ---`);
         console.log(`Numero de Legajo:\t${this.nro_legajo}`);
-        super.listarInfo()
+        super.listarInfo();
     }
 
     getLegajo():number{
