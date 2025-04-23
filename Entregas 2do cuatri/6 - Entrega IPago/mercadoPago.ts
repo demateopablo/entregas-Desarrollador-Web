@@ -5,24 +5,27 @@ export class MercadoPago implements IPago {
     private qr: string; //podria ser un string del qr en base 64
     private monto: number;
 
-    constructor(qr: string, monto: number, entidadDestino = "Banco Galicia") {
+    constructor(qr: string, monto: number) {
         this.qr = qr;
         this.monto = monto;
-        this.entidadDestino = entidadDestino;
     }
 
     procesarPago(): void {
-        console.log(`Leyendo el QR: {{img→${this.qr}}}.`);
-        console.log(`Destinatario: ${this.entidadDestino}. Monto: $${this.monto}`);
+        console.log(`Destinatario: ${this.obtenerEntidadDestino()}. Monto: $${this.monto}`);
         console.log(`¡Pago Exitoso!`);
     }
-
+    
     cancelarPago(): void {
         console.log("El pago ha sido cancelado")
     }
-
+    
     generarRecibo(): void {
         console.log(`Pagaste $${this.monto} a ${this.entidadDestino}.`)
     }
-
+    
+    obtenerEntidadDestino():string{
+        console.log(`Leyendo el QR: {{img→${this.qr}}}.`);
+        //procesamiento para detectar entidad de destino
+        return "Banco Galicia";
+    }
 }
