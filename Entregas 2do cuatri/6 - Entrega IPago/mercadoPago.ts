@@ -11,7 +11,8 @@ export class MercadoPago implements IPago {
     }
 
     procesarPago(): void {
-        console.log(`Destinatario: ${this.obtenerEntidadDestino()}. Monto: $${this.monto}`);
+        this.entidadDestino = this.obtenerEntidadDestino(this.qr);
+        console.log(`Destinatario: ${this.entidadDestino}. Monto: $${this.monto}`);
         console.log(`¡Pago Exitoso!`);
     }
     
@@ -23,9 +24,10 @@ export class MercadoPago implements IPago {
         console.log(`Pagaste $${this.monto} a ${this.entidadDestino}.`)
     }
     
-    obtenerEntidadDestino():string{
-        console.log(`Leyendo el QR: {{img→${this.qr}}}.`);
+    obtenerEntidadDestino(qr:string){
+        console.log(`Leyendo el QR: {{img→${qr}}}.`);
         //procesamiento para detectar entidad de destino
+        console.log(`Destinatario encontrado.`)
         return "Banco Galicia";
     }
 }
