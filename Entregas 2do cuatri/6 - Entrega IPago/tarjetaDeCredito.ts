@@ -20,7 +20,7 @@ export class TarjetaDeCredito implements IPago {
   }
 
   generarRecibo(): void {
-    console.log(`La transferencia ha sido exitosa`)
+    console.log(`El pago con tu tarjeta ${this.entidad} ha sido exitoso.`)
   }
 
 }
