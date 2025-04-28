@@ -1,6 +1,6 @@
 import { IPago } from "./iPago";
 
-export class TarjetDeCredito implements IPago {
+export class TarjetaDeCredito implements IPago {
   private cuotas: number;
   private entidad: string;
   private numeroDeTarjeta: number;
