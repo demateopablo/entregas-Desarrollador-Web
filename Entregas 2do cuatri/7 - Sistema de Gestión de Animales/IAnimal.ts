@@ -1,4 +1,4 @@
-export interface iAnimal {
+export interface IAnimal {
     emitirSonido():void;
     moverse():void;
 }

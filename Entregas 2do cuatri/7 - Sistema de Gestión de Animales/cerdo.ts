@@ -1,13 +1,9 @@
 import { Animal } from './animal'
 
 export class Cerdo extends Animal {
-    protected food: string;
-    protected onomatopeia: string;
 
     constructor() {
-        super(`Cerdo`);
-        this.onomatopeia = `Oink Oink`;
-        this.food = `Verduras`;
+        super(`Cerdo`, `oink oink`, `verduras`);
     }
 
     tipoDeDieta(): void {
